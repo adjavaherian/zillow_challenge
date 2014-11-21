@@ -1,0 +1,422 @@
+@import url("//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css");
+
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  clear: both;
+
+  /* Make the masthead heading the same height as the navigation */
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+/* Remove the padding we set earlier */
+.header,
+.marketing,
+.footer {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Space out the masthead */
+.header {
+    margin-bottom: 30px;
+}
+
+.stage ul{
+    /*list-style: none;*/
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Custom Content */
+    div.container {
+        width: 100%;
+        min-width: 768px; /* c min width + (2x lc width + rc width) */
+    }
+
+    .stage {
+        width: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        padding-left: 170px;
+        padding-right: 200px;
+    }
+
+    #col-left,
+    #col-center,
+    #col-right {
+        float: left;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        position: relative;
+        padding-bottom: 20010px; /* X + padding-bottom */
+        margin-bottom: -20000px; /* X */
+    }
+
+    #col-left {
+        width: 170px;
+        right: 170px;
+        margin-left: -100%;
+        background: rgba(255, 0, 0, 0.5);
+    }
+
+    #col-center {
+        width: 100%;
+        min-width: 350px;
+        overflow: hidden;
+        background: white;
+    }
+
+    #col-right {
+        width: 200px;
+        margin-right: -200px;
+        background: rgba(0, 0, 255, 0.5);
+    }
+
+    .footer {
+        position: relative;
+        clear: both;
+    }
+
+    /*** IE6 Fix ***/
+    * html #col-left {
+        left: 200px; /* RC width */
+    }
+
+    #carList{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 0;
+        height: 120px;
+        width: 450px;
+        border: 1px solid #bbbbbb;
+    }
+
+    #carList ul:before{
+        content: "Car List"
+    }
+
+    /* NYT and Tabs */
+    #nyt {
+
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 0;
+        height: 550px;
+        width: 450px;
+    }
+
+    .tabs input[type="radio"] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .tabs {
+        float: none;
+        list-style: none;
+        position: relative;
+        margin: 0;
+        text-align: left;
+        padding: 0;
+    }
+
+    .tabs li {
+        float: left;
+        display: block;
+    }
+
+    .tabs label {
+        display: block;
+        margin: 0;
+        padding: 5px 10px;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        top: 4px;
+        background: white;
+        font-weight: normal;
+    }
+
+    .tab-content {
+        z-index: 2;
+        display: none;
+        overflow: hidden;
+        width: 100%;
+        font-size: 17px;
+        line-height: 25px;
+        padding: 0px 10px;
+        position: absolute;
+        /*top: 53px;*/
+        left: 0;
+        background: white;
+        border: 1px solid #bbbbbb;
+    }
+
+    [id^="tab"] + label {
+        top: 0;
+        background: #e4e8e9;
+        border: 1px solid #bbbbbb;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    [id^="tab"]:checked + label {
+        background: white;
+    }
+
+    .tab.active:after{
+        z-index: 3;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background: #ffffff;
+        border-left: 1px solid #bbbbbb;
+    }
+
+    .tab.active + li label{
+
+    }
+
+    .tab:last-child label{
+        border-right: 1px solid #bbbbbb;
+    }
+
+
+    [id^="tab"]:checked ~ [id^="tab-content"] {
+        display: block;
+    }
+
+    .tab-content .widget-section:first-child{
+        border: none;
+        margin-top: 0;
+    }
+
+    .tab-content .widget-section{
+        font-family: "Times New Roman", Times, serif;
+        padding: 10px 0 10px 0;
+        border-top: 1px solid #bbbbbb;
+        clear: both;
+        margin: 10px 0 10px 0;
+    }
+
+    .widget-section .heading{
+        font-size: 0.7em;
+        text-transform: uppercase;
+        font-family: "Helvetica", Helvetica, sans-serif;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .widget-section .left{
+        float: left;
+        width: 55%;
+        padding: 0;
+        padding-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .widget-section .right{
+        float: right;
+        padding-left: 5px;
+        width: 45%;
+    }
+
+    .widget-section p{
+        float: left;
+        width: 100px;
+        font-size: 0.9em;
+        line-height: 1.5em;
+    }
+
+    .widget-section img{
+
+    }
+
+    .widget-section .ablock{
+        width: 130px;
+        color: #1F376D;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .widget-section ul{
+        float: left;
+        clear: both;
+        padding: 0;
+        margin: 0 0 10px 0;
+        list-style: none;
+        display: table;
+    }
+
+    .widget-section ul.no-bullet li:before{
+        display: none;
+    }
+
+    .widget-section ul li{
+        font-size: 0.9em;
+        line-height: 1.5em;
+        color: #2d549e;
+        font-family: "Helvetica", Helvetica, sans-serif;
+        cursor: pointer;
+        display: table-row;
+        width: 100%;
+    }
+
+    .widget-section ul li:before {
+        content: "• ";
+        color: #777777;
+        position: relative;
+        display: table-cell;
+        width: 10px;
+
+    }
+
+    .widget-section ul li span{
+        display: table-cell;
+    }
+
+    .widget-section ul li:hover{
+        /*text-decoration: underline;*/
+    }
+
+    .widget-section:last-child{
+        margin-bottom: 0;
+    }
+
+    .widget-section:last-child ul{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        margin-bottom: 0;
+    }
+
+    .widget-section:last-child ul li{
+        width: 100%;
+    }
+
+    .widget-section:last-child ul li span{
+        display: inline;
+    }
+
+    .double-arrow{
+        /*font-size: 0.6em;*/
+    }
+}
+/* Tablets and Devices */
+@media screen and (max-width: 768px) {
+    body{
+        
+    }
+    /* Custom Content */
+    div.container{
+        width: 100%;
+    }
+
+    .stage{
+        width: 100%;
+        height: 384px;
+        text-align: center;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        /* optional */
+        -webkit-box-align: start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+
+    }
+
+    #col-left,
+    #col-center,
+    #col-right{
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #col-left{
+        background: rgba(255,0,0,0.5);
+        -ms-flex-order: 0;
+        -webkit-order: 0;
+        order: 0;
+    }
+
+    #col-center{
+
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1;
+    }
+
+    #col-right{
+        background: rgba(0,0,255,0.5);
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
+    }
+
+    .footer{
+        clear: both;
+    }
+
+    #nyt {
+        display: none;
+    }
+}
